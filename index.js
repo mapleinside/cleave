@@ -1,9 +1,9 @@
 import commander from 'commander';
+import run from '@nicolascava/felfire-run';
 
-import {run} from 'packages/helpers/node/commands';
-import resolve from 'packages/cleave/tasks/resolve';
-import generic from 'packages/cleave/tasks/generic';
-import {version} from 'packages/cleave/package.json';
+import resolve from './lib/tasks/resolve';
+import generic from './lib/tasks/generic';
+import { version } from './package.json';
 
 const commands = ['resolve', 'install', 'extract'];
 const task = commands.indexOf(process.argv[2]) === -1 ? process.argv[2] : null;
@@ -13,14 +13,14 @@ async function handleResolveCommand() {
 }
 
 async function handleGenericCommand(options) {
-  const all = options.all;
+  const { all } = options;
 
-  return run(generic, {task, all});
+  return run(generic, { task, all });
 }
 
 function handleMissingCommand() {
   throw new Error('Unknown Cleave task. See all available commands in the documentation: ' +
-    'https://github.com/mapleinside/ip/tree/master/packages/cleave');
+    'https://github.com/nicolascava/cleave');
 }
 
 commander.version(version);

@@ -1,13 +1,3 @@
-# Cleave
-
-> Strike your monorepo with an only-modified package sweeping build
-
-## Summary
-
-Cleave helps developers to manage monorepos by running commands across packages. By default, it runs commands only on packages that have been modified.
-
-## License
-
 The MIT License (MIT)
 
 Copyright (c) 2018 Nicolas Cava
