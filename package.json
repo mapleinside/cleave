@@ -1,7 +1,7 @@
 {
   "name": "cleave",
   "description": "Strike your monorepo with an only-modified package sweeping build",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-eslint": "^8.0.2",
